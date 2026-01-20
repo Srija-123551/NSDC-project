@@ -22,9 +22,9 @@ jobs:
       - name: Configure AWS credentials using OIDC
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::361966321914:role/Projectrole
+          role-to-assume: arn:aws:iam::361966321914:role/Parkifyrole
           aws-region: eu-north-1
 
       - name: Upload duplicate.html to S3
         run: |
-          aws s3 cp web.html s3://${{ secrets.S3_BUCKET_NAME }}/duplicate.html
+          aws s3 cp duplicate.html s3://${{ secrets.S3_BUCKET_NAME }}/duplicate.html
